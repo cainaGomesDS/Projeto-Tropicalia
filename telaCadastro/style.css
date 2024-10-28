@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #FCFAD7;
+}
+
+.conteudo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    box-shadow: 2px;
+    background: linear-gradient(180deg, #F7F29A, #9DC37B);
+}
+
+
+.conteudo h1{
+    color: #f9f9f9;
+    text-shadow: 0px 2px 4px #82C390;
+}
+
+
+.conteudo input{
+    margin: 20px;
+    border: solid;
+    border-color: #82C390;
+    border-radius: 20px;
+    border-width: 3px;
+}
