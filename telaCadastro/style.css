@@ -15,6 +15,30 @@ body {
     width: 50%;
 }
 
+
+.fundoImagem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+
+.imagem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+}
+
+.fundoImagem .imagem img{
+    height: 100%;
+    width: 90%;
+}
+
+
 .conteudo {
     display: flex;
     flex-direction: column;
@@ -40,22 +64,35 @@ body {
 .conteudo input {
     margin: 20px;
     border: solid;
-    border-color: #82C390;
+    border-color: #d3d3d3;
     border-radius: 12px;
     border-width: 3px;
     width: 80%;
     height: 4%;
-    padding: 3px;
+    padding: 3px 3px 3px 10px;
+    color: #3DA753;
+    background-color: #e8e8e8;
+    font-family: inter, sans-serif;
 }
 
+.conteudo p{
+    font-family: inter, sans-serif;
+    font-size: small;
+}
 
+.conteudo #senhaRequisitos{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
 input:focus {
     outline: none;
+    background-color: #f9f9f9;
 }
 
 
 input::placeholder {
-    color: #d3d3d3;
+    color: #d1d1d1;
     opacity: 90%;
 }
 
@@ -76,4 +113,6 @@ input::placeholder {
 
 button:hover {
     cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.5s;
 }

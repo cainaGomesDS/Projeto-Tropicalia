@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"  rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
     <title>Cadastro</title>
 </head>
 
@@ -15,16 +17,38 @@
     <div class="fundo">
         <div class="conteudo">
             <h1>Crie uma conta</h1>
-            <input type="text" id="input_username" placeholder="Insira seu nome">
-            <input type="text" id="input_input_usersenha" placeholder="Insira sua senha">
-            <input type="text" id="input_useremail" placeholder="Insira seu e-mail">
-            <button onclick="">Cadastrar</button>
+
+            <input type="text" id="input_userName" placeholder="Insira seu nome">
+
+            <input type="text" id="input_userEmail" placeholder="Insira seu e-mail" oninput="validarEmail()">
+
+            <input type="password" id="input_userSenha" placeholder="Insira sua senha"
+                onblur="ocultarRequisitosSenha()"
+                onfocus="mostrarRequisitosSenha()"
+                oninput="validarSenha()">
+
+            <div id="senhaRequisitos" style="display: none;">
+                <p id="senhaMinuscula" style="color: red;"> - Deve conter uma letra minúscula</p>
+                <p id="senhaMaiuscula" style="color: red;">- Deve conter uma letra maiúscula</p>
+                <p id="senhaNumero" style="color: red;">- Deve conter um número</p>
+                <p id="senhaEspecial" style="color: red;">- Deve conter um caractere especial</p>
+            </div>
+
+            <input type="password" id="input_validarSenha" placeholder="Insira sua senha novamente"
+            oninput="validarSenhasIguais()">
+
+            <button onclick="validarCadastro()">Cadastrar</button>
+
         </div>
     </div>
 
-    <div class="imagem">
-        <img src="" alt="artistas do mpb">
+    <div class="fundoImagem">
+        <div class="imagem">
+            <img src="./imagens/music.png" alt="artistas do mpb">
+        </div>
     </div>
 </body>
 
 </html>
+
+<script src="./functions.js"></script>
