@@ -18,9 +18,22 @@
         <div class="conteudo">
             <h1>Crie uma conta</h1>
 
-            <input type="text" id="input_userName" placeholder="Insira seu nome">
+            <input type="text" id="input_userNome" placeholder="Insira seu nome"
+                oninput="nomeSelecionado()"
+                >
 
-            <input type="text" id="input_userEmail" placeholder="Insira seu e-mail" oninput="validarEmail()">
+            <div id="nomeRequisitos" style="display: none;">
+                <p id="nomeRegra">Seu nome deve ter mais de 3 caracteres!</p>
+            </div>
+
+            <input type="text" id="input_userEmail" placeholder="Insira seu e-mail"
+                oninput="validarEmail()"
+                onfocus="mostrarEmailRegra()"
+                onblur="ocultarEmailRegra()">
+
+            <div id="emailRequisitos" style="display: none;">
+                <p id="emailRegra" style="color: red;">- Utilize "@", um ponto "." e um domínio válido</p>
+            </div>
 
             <input type="password" id="input_userSenha" placeholder="Insira sua senha"
                 onblur="ocultarRequisitosSenha()"
@@ -28,7 +41,7 @@
                 oninput="validarSenha()">
 
             <div id="senhaRequisitos" style="display: none;">
-                <p id="senhaMinuscula" style="color: red;"> - Deve conter uma letra minúscula</p>
+                <p id="senhaMinuscula" style="color: red;">- Deve conter uma letra minúscula</p>
                 <p id="senhaMaiuscula" style="color: red;">- Deve conter uma letra maiúscula</p>
                 <p id="senhaNumero" style="color: red;">- Deve conter um número</p>
                 <p id="senhaEspecial" style="color: red;">- Deve conter um caractere especial</p>
