@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styleLogin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <title>Login</title>
+</head>
+<body>
+    <div class="fundo">
+        <div class="conteudo">
+            <h1>Login</h1>
+
+            <input type="text" id="input_userNome" placeholder="Nome de usuário">
+
+            <input type="password" id="input_userSenha" placeholder="Senha">
+
+            <button onclick="validarLogin()">Login</button>
+            <!-- Colocar no js validação de cadastro e login com redirecionamento para o index -->
+             <div id="mensagemErroBtn" style="color: red; display: none;">
+                <p>Por favor, corrija os erros ou preencha todos os campos e tente novamente.</p>
+             </div>
+
+            <div class="mensagemLogin">Não possui uma conta? <a href="./cadastroTropicalia.html">Cadastre-se</a></div>
+        </div>
+    </div>
+
+    <div class="fundoImagem">
+        <div class="imagem">
+            <img src="./assets/imagens/gal.png" alt="artistas do mpb">
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="./js/scriptLogin.js"></script>
