@@ -162,7 +162,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     padding: 50px;
-    margin: 90px 0px 0px 0px;
+    margin: 90px 35px 0px;
     background-color: #9DC37B;
     height: 50vh;
     border-radius: 50px;
@@ -214,6 +214,10 @@ body {
     font-size: 35px;
     padding: 20px;
     margin: 0px 0px 30px;
+}
+
+.bannerOnu img{
+    height: 300px;
 }
 
 
