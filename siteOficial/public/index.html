@@ -1,82 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./css/styleIndex.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
 
-    <title>AquaTech | Página Inicial</title>
-
-    <script src="./js/sessao.js"></script>
-
-    <link rel="stylesheet" href="./css/estilo.css">
-    <link rel="icon" href="./assets/icon/favicon2.ico">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
 </head>
 
 <body>
     <div class="header">
-      <div class="container">
-        <h1 class="titulo">AquaTech</h1>
-        <ul class="navbar">
-          <li class="agora">
-            <a href="#">Inicial</a>
-          </li>
-          <li>
-            <a href="simulador.html">Simulador</a>
-          </li>
-          <li>|</li>
-          <li>
-            <a href="login.html">Login</a>
-          </li>
-          <li>
-            <a href="cadastro.html">Cadastro</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  
-    <div class="banner">
-      <div class="container">
-        <p>Preservando <span>hoje</span> para existirem <span>amanhã</span>.</p>
-      </div>
-    </div>
-  
-    <div class="social">
-      <div class="container">
-        <div class="boxes">
-          <div class="box">
-            <img src="assets/imgs/planet-earth_color.png">
-            <h4>Missão</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, quas cupiditate asperiores provident magnam
-              vitae illum iusto fugiat atque deleniti nulla sed iure suscipit, laborum, aliquid accusantium cum dicta
-              minima.</p>
-          </div>
-          <div class="box">
-            <img src="assets/imgs/lightbulb_color.png">
-            <h4>Visão</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, quas cupiditate asperiores provident magnam
-              vitae illum iusto fugiat atque deleniti nulla sed iure suscipit, laborum, aliquid accusantium cum dicta
-              minima.</p>
-          </div>
-          <div class="box">
-            <img src="assets/imgs/growth_color.png">
-            <h4>Valores</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, quas cupiditate asperiores provident magnam
-              vitae illum iusto fugiat atque deleniti nulla sed iure suscipit, laborum, aliquid accusantium cum dicta
-              minima.</p>
-          </div>
+        <div class="container">
+            <h1 class="nomeSiteHeader"><a href="index.html">Tropicália</a></h1>
+            <ul class="navbar">
+                <li class="inicial">
+                    <a href="index.html">Início</a>
+                </li>
+                <li>|</li>
+                <li>
+                    <a href="conteudo.html">A música brasileira</a>
+                </li>
+                <li>|</li>
+                <li>
+                    <a href="login.html">Posts</a>
+                </li>
+                <li>|</li>
+                <li>
+                    <a href="./loginTropicalia.html">Login</a>
+                </li>
+            </ul>
         </div>
-      </div>
     </div>
-  
+
+    <div class="principal">
+        <div class="titulo">Brasil o lar da música criativa</div>
+
+        <img src="./assets/imagens/gal home.png" alt="" class="imgPrincipal">
+    </div>
+
+    <div class="txtSobre">
+        <h2>SOBRE</h2>
+        <p>A música brasileira é um forte aspecto cultural no nosso país, juntando
+            diversas características de outros países e mesmo assim mantendo uma identidade
+            única, sendo importante para a história do Brasil e essencial para explicar como nos
+            moldamos no mundo musical. O objetivo desse blog é justamente trazer como a música
+            é tão ligada conosco e trazer você para ser parte dessa história.</p>
+    </div>
+
+    <div class="txtBlog">
+        <h2>O BLOG</h2>
+        <div class="cards">
+            <div class="card">
+                <div class="imagemCard">
+                    <img src="./assets/imagens/musica-de-guitarra.png" alt="">
+                </div>
+                <p>Saiba mais sobre a história da MPB!</p>
+            </div>
+            <div class="card">
+                <div class="imagemCard">
+                    <img src="./assets/imagens/perfil-de-usuario.png" alt="">
+                </div>
+                <p>Crie uma conta com cadastro e login!</p>
+            </div>
+            <div class="card">
+                <div class="imagemCard">
+                    <img src="./assets/imagens/camera-de-video.png" alt="">
+                </div>
+                <p>Envie links de seus vídeos de música para postarmos aqui!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="bannerCadastro">
+        <div class="bannerFrase">
+            <h2>Crie sua conta e aproveite, mostre o seu potencial e se inspire com a música brasileira</h2>
+        </div>
+        <div class="bannerBtn">
+            <a href="./cadastroTropicalia.html">
+                <button>Cadastre-se</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="bannerOnu">
+        <h2>RELAÇÃO COM A ONU</h2>
+        <div class="imgOnu">
+            <img src="./assets/imagens/onu.jpg" alt="">
+        </div>
+    </div>
+
     <div class="footer">
-      <div class="container">
-        <h4>Feito com amor por aluno &hearts; SPTech &copy; 2023</h4>
-        <span class="version">v1.0.0</span>
-      </div>
+        <div class="nomeSiteFooter">Tropicália</div>
+
+        <div class="infosExtras">
+            <p>Contato: tropicalia@music.com</p>
+            <p>© 2024 Tropicália</p>
+        </div>
     </div>
-  </body>
+</body>
 
 </html>
