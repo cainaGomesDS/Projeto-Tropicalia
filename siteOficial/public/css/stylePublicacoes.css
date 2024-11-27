@@ -95,11 +95,12 @@ body {
 .videos{
     display: grid;
     grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
     justify-items: center;
     padding: 10px;
 }
 
-.videos iframe{
+.videos .configVideo{
     margin: 50px;
 }
 

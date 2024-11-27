@@ -16,7 +16,7 @@ function enviarVideo(url, idUsuario, titulo) {
 function trazerVideo() {
     console.log("ACESSEI O TRAZER VIDEO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function trazerVideo():")
     var instrucaoSql = `
-        SELECT url, titulo, fkCadastro FROM links ORDER BY idLinks DESC;
+        SELECT nome, idLinks, url, titulo, fkCadastro FROM links as L JOIN cadastro as C ON L.fkCadastro = C.idCadastro ORDER BY idLinks DESC;
     `;
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);

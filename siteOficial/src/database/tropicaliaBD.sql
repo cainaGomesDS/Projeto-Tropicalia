@@ -37,7 +37,8 @@ CREATE TABLE links(
 );
 ALTER TABLE links MODIFY COLUMN idLinks INT AUTO_INCREMENT;
 ALTER TABLE links ADD COLUMN titulo VARCHAR(70);
-SELECT idLinks, url, titulo, fkCadastro FROM links ORDER BY idLinks DESC;
+SELECT nome, idLinks, url, titulo, fkCadastro FROM links as L JOIN cadastro as C ON L.fkCadastro = C.idCadastro ORDER BY idLinks DESC;
+
 DELETE FROM links where idLinks = 6; 
 
 CREATE TABLE resultadosQuiz(
