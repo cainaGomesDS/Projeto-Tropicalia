@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <script src="./js/scriptQuiz.js"></script>
+    
+    <link rel="stylesheet" href="./css/styleQuiz.css">
+</head>
+
+
+<body onload="onloadEsconder(), validarSessao()">
+    <div id="pontuacaoEJogo">
+        <div id="tituloQuiz">
+            <h1>Tropicália</h1>
+        </div>
+        <button id="btnIniciarQuiz" onclick="iniciarQuiz()">INICIAR QUIZ</button>
+
+        <div id="pontuacao" class="flex-colunar width-fit-content border-primary">
+            <h1>Vamos jogar!</h1>
+
+
+        </div>
+
+        <div id="jogo" class="width-fit-content flex-colunar border-secondary">
+
+            <div id="infoQuestao" class="padding-8">
+                <span>Questão atual: <span id="spanNumeroDaQuestaoAtual"></span> de <span id="qtdQuestoes"></span>
+                    questões.</span>
+            </div>
+
+            <div id="perguntaDaQuestaoAtual" class="padding-8">
+                <span id="spanQuestaoExibida" class="text-bold"></span>
+            </div>
+
+            <div id="infoAlternativas" class="padding-8">
+                <span><em>Escolha uma opção dentre as abaixo:</em></span>
+            </div>
+
+            <div id="opcoes" class="flex-colunar padding-8">
+                <span>
+                    <input type="radio" id="primeiraOpcao" name="option" class="radio" value="alternativaA" />
+                    <label for="primeiraOpcao" class="option" id="labelOpcaoUm"></label>
+                </span>
+                <span>
+                    <input type="radio" id="segundaOpcao" name="option" class="radio" value="alternativaB" />
+                    <label for="segundaOpcao" class="option" id="labelOpcaoDois"></label>
+                </span>
+                <span>
+                    <input type="radio" id="terceiraOpcao" name="option" class="radio" value="alternativaC" />
+                    <label for="terceiraOpcao" class="option" id="labelOpcaoTres"></label>
+                </span>
+                <span>
+                    <input type="radio" id="quartaOpcao" name="option" class="radio" value="alternativaD" />
+                    <label for="quartaOpcao" class="option" id="labelOpcaoQuatro"></label>
+                </span>
+            </div>
+
+            <div id="botoes" class="divBotoes padding-8">
+                <button onclick="submeter()" id="btnSubmeter" class="btnJogo">Responder</button>
+                <button onclick="avancar()" id="btnProx" disabled class="btnJogo">Próxima questão</button>
+                <!-- <button onclick="finalizar()" id="btnConcluir" disabled>Finalizar Quiz</button> -->
+                <button onclick="tentarNovamente()" id="btnTentarNovamente" disabled class="btnJogo">Tentar
+                    novamente</button>
+                <button onclick="enviarResultados(), finalizarJogo(), abrirForm()" class="btnJogo">Finalizar
+                    jogo</button>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <dialog id="modal">
+        <button id="fecharModal" onclick="fecharForm(), enviarVideos()">X</button>
+        <div id="divImagemFinal">
+            <span id="msgImagem" class="msgFinalCss"></span>
+            <div id="divImagem" class="imagemFinal"><img id="imagemQuiz" src="" alt=""></div>
+            <button id="btnResultados" onclick="plotarGrafico()" class="btnJogo">Ver resultados</button>
+        </div>
+        <div id="graficos" class="charts" style="display: none;">
+            <div class="graficoBarra">
+                <canvas id="barChartQuiz"></canvas>
+            </div>
+            <div class="kpi">
+                <div class="kpiPontos">
+                    <h4>Sua pontuação</h4>
+                    <span id="msgFinal" class="msgFinalCss">70</span>
+                </div>
+                    <h1>Tropicália</h1>
+            </div>
+        </div>
+    </dialog>
+
+</body>
+
+</html>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    // Função para obter os dados do quiz do servidor e plotar no gráfico
+    
+
+</script>
