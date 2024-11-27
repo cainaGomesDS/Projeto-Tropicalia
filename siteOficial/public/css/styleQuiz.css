@@ -1,0 +1,235 @@
+/* Não usar pure white or pure black: https://uxplanet.org/basicdesign-never-use-pure-black-in-typography-36138a3327a6 */
+/* The 4-point grid system: https://medium.com/@sainzkike/controlling-spacing-in-design-systems-multiple-spacing-9bf1afec87f */
+
+:root {
+    --primary-brand-color: #3DA753;
+    --secondary-brand-color: #9DC37B;
+    --success: #198754;
+    --success-dark: #095c36;
+    --success-light: #9dd3ba;
+    --warning: #ffc107;
+    --warning-dark: #705400;
+    --warning-light: #fdebb3;
+    --danger: #dc3545;
+    --danger-dark: #990c19;
+    --danger-light: #f0c1c6;
+    --new-gray: #CCCCCC;
+    --new-black: #212427;
+    --new-white: #E8E8E8;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'inter', sans-serif;
+    background-color: #FCFAD7;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@font-face {
+    font-family: long-beach;
+    src: url('../assets/fonts/Long-Beach-_Demo_-hanscostudio.com.woff');
+    font-weight: 400;
+}
+
+
+#tituloQuiz{
+    font-family: long-beach;
+    color: #3DA753;
+    font-size: 20px;
+}
+
+#pontuacao h1{
+    color: #FCFAD7;
+    align-self: center;
+    font-size: 20px;
+}
+
+#btnIniciarQuiz {
+    font-family: monospace;
+    font-weight: bold;
+    height: 40px;
+    border: transparent;
+    border-radius: 10px;
+    background-color: #3DA753;
+    width: 22%;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    color: #FCFAD7;
+}
+
+#btnIniciarQuiz:hover{
+    transform: scale(1.1);
+    color: #3DA753;
+    background-color: #FCFAD7;
+}
+
+#pontuacaoEJogo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+.flex-colunar {
+    display: flex;
+    flex-direction: column;
+}
+
+.width-fit-content {
+    width: 80%;
+}
+
+
+.msgFinalCss{
+    width: 25%;
+    align-self: center;
+    border: transparent;
+    border-radius: 10px;
+    padding: 8px;
+}
+
+
+.btnJogo{
+    height: 40px;
+    border: transparent;
+    border-radius: 10px;
+    background-color: #3DA753;
+    width: 22%;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    color: #FCFAD7;
+    font-weight: 600;
+}
+
+.btnJogo:hover{
+    transform: scale(1.1);
+    color: #3DA753;
+    background-color: #FCFAD7;
+}
+
+.divBotoes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.divBotoes button{
+    margin: 15px;
+}
+
+
+#graficos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+.border-primary {
+    border: 3px solid var(--primary-brand-color);
+    background-color: #3DA753;
+    color: #f9f9f9;
+}
+
+.border-secondary {
+    border: 3px solid var(--secondary-brand-color);
+}
+
+.padding-8 {
+    padding: 10px;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.text-success-with-bg {
+    color: var(--success-dark);
+    background-color: var(--success-light);
+}
+
+.text-warning-with-bg {
+    color: var(--warning-dark);
+    background-color: var(--warning-light);
+}
+
+.text-danger-with-bg {
+    color: var(--danger-dark);
+    background-color: var(--danger-light);
+}
+
+.text-new-gray {
+    color: var(--new-gray);
+}
+
+#divImagemFinal{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+#divImagemFinal img{
+    height: 300px;
+}   
+
+.kpi{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    color: #f9f9f9;
+    background-color: #3DA753;
+    width: 30%;
+    height: 80%;
+    border-radius: 20px;
+}
+
+.kpi span{
+    font-size: 40px;
+}
+
+.kpi h1{
+    color: #FCFAD7;
+    font-family: long-beach, sans-serif;
+}
+
+.graficoBarra{
+    display: flex;
+    width: 60%;
+}
+
+#barChartQuiz{
+    background-color: #FCFAD7;
+}
+#modal{
+    height: 80%;
+    width: 65%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: transparent;
+    border-radius: 30px;
+    background-color: #FCFAD7;
+}
+
+#modal #fecharModal{
+    align-self: flex-start;
+    color: #3DA753;
+    background-color: #FCFAD7;
+    border: transparent;
+    font-size: 25px;
+    cursor: pointer;
+}

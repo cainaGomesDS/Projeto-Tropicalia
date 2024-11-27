@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="./css/styleIndex.css">
+    <link rel="stylesheet" href="./css/publicacoes.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -14,7 +14,7 @@
 
 </head>
 
-<body>
+<body onload="validarSessao(), trazerVideo()">
     <div class="header">
         <div class="container">
             <h1 class="nomeSiteHeader"><a href="index.html">Tropicália</a></h1>
@@ -28,7 +28,11 @@
                 </li>
                 <li>|</li>
                 <li>
-                    <a href="login.html">Posts</a>
+                    <a href="publicacoes.html">Posts</a>
+                </li>
+                <li>|</li>
+                <li>
+                    <a href="quiz.html">Quiz</a>
                 </li>
                 <li>|</li>
                 <li>
@@ -38,62 +42,36 @@
         </div>
     </div>
 
-    <div class="principal">
-        <div class="titulo">Brasil o lar da música criativa</div>
-
-        <img src="./assets/imagens/gal home.png" alt="" class="imgPrincipal">
+    <div class="imgPrincipalPubli">
+       <p>Acompanhe os vídeos de nossos tropicalistas</p>
+        <p>Nos envie o link de seus vídeos para postarmos!</p>
     </div>
 
-    <div class="txtSobre">
-        <h2>SOBRE</h2>
-        <p>A música brasileira é um forte aspecto cultural no nosso país, juntando
-            diversas características de outros países e mesmo assim mantendo uma identidade
-            única, sendo importante para a história do Brasil e essencial para explicar como nos
-            moldamos no mundo musical. O objetivo desse blog é justamente trazer como a música
-            é tão ligada conosco e trazer você para ser parte dessa história.</p>
+    <div class="tituloPosts">
+        <h2>POSTS</h2>
+
+    </div>
+ 
+    <div id="divVideos" class="videos">
+       
     </div>
 
-    <div class="txtBlog">
-        <h2>O BLOG</h2>
-        <div class="cards">
-            <div class="card">
-                <div class="imagemCard">
-                    <img src="./assets/imagens/musica-de-guitarra.png" alt="">
-                </div>
-                <p>Saiba mais sobre a história da MPB!</p>
-            </div>
-            <div class="card">
-                <div class="imagemCard">
-                    <img src="./assets/imagens/perfil-de-usuario.png" alt="">
-                </div>
-                <p>Crie uma conta com cadastro e login!</p>
-            </div>
-            <div class="card">
-                <div class="imagemCard">
-                    <img src="./assets/imagens/camera-de-video.png" alt="">
-                </div>
-                <p>Envie links de seus vídeos de música para postarmos aqui!</p>
-            </div>
-        </div>
-    </div>
+    
+    
+    
+    <button onclick="abrirForm()" class="btnPubli">
+        <p>Mande seu vídeo!</p>
+    </button>
 
-    <div class="bannerCadastro">
-        <div class="bannerFrase">
-            <h2>Crie sua conta e aproveite, mostre o seu potencial e se inspire com a música brasileira</h2>
-        </div>
-        <div class="bannerBtn">
-            <a href="./cadastroTropicalia.html">
-                <button>Cadastre-se</button>
-            </a>
-        </div>
-    </div>
+    <dialog id="modal">
+        <button id="btnXForm" onclick="fecharForm()">X</button>
+        <p>Qual o título do vídeo ?</p>
+        <input type="text" id="input_texto">
+        <p>Coloque o link do seu vídeo:</p>
+        <input type="text" id="input_url">
+        <button id="btnEnviarForm" onclick="fecharForm(), enviarVideos()">Enviar</button>
+    </dialog>
 
-    <div class="bannerOnu">
-        <h2>RELAÇÃO COM A ONU</h2>
-        <div class="imgOnu">
-            <img src="./assets/imagens/onu.jpg" alt="">
-        </div>
-    </div>
 
     <div class="footer">
         <div class="nomeSiteFooter">Tropicália</div>
@@ -106,3 +84,7 @@
 </body>
 
 </html>
+
+<script src="./js/scriptVideos.js"></script>
+
+<iframe src="" frameborder="0"></iframe>

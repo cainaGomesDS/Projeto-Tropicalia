@@ -109,9 +109,48 @@ function validarCadastro() {
         document.getElementById('input_validarSenha').style.borderColor === 'green';
 
     if (camposValidos) {
+
+        var nomeVar = input_userNome.value
+        var emailVar = input_userEmail.value
+        var senhaVar = input_userSenha.value
+
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeServer: nomeVar,
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            }),
+        })
+            .then(function (resposta) {
+                console.log("resposta: ", resposta);
+
+                if (resposta.ok) {
+                    cardErro.style.display = "block";
+
+                    mensagem_erro.innerHTML =
+                        "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+                } else {
+                    throw "Houve um erro ao tentar realizar o cadastro!";
+                }
+            })
+            .catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+                finalizarAguardar();
+            });
         // Redireciona para a página de login
-        window.location.href = './login.html';
+        setTimeout(() => {
+            window.location = "loginTropicalia.html";
+        }, "2000");
+        
+        return false;
     } else {
         alert('Por favor, corrija os erros ou preencha todos os campos e tente novamente.');
     }
 }
+
