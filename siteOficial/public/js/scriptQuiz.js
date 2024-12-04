@@ -41,6 +41,7 @@ const listaDeQuestoes = [
         alternativaD: "mares | desses passos",
         alternativaCorreta: "alternativaA"
     },
+
     {
         pergunta: "O movimento tropicália surgiu como oposição a um ocorrido no Brasil. Qual era esse ocorrido?",
         alternativaA: "Guerra dos Canudos",
@@ -48,6 +49,60 @@ const listaDeQuestoes = [
         alternativaC: "República",
         alternativaD: "Guerra do Paraguai",
         alternativaCorreta: "alternativaB"
+    },
+
+    {
+        pergunta: 'Complete o trecho da música: "Você e eu somos um _______, ao som de um ______, dose dupla, _______"',
+        alternativaA: "caso médio | violão | filhos da lua",
+        alternativaB: "tédio | caramelo | românticos e chuva",
+        alternativaC: "caso sério | bolero | românticos de Cuba Libre",
+        alternativaD: "caso sério | piano | românticos em muda de flor",
+        alternativaCorreta: "alternativaC"
+    },
+
+    {
+        pergunta: "O MPB vai muito além da época da tropicália, juntando muitos estiilos musicais, dito isso quem é considerado o rei do soul brasileiro?",
+        alternativaA: "Djavan",
+        alternativaB: "Agnaldo Raiol",
+        alternativaC: "Jorge Ben Jor",
+        alternativaD: "Tim Maia",
+        alternativaCorreta: "alternativaD"
+    },
+
+    {
+        pergunta: "Na MPB um instrumento foi colocado no meio das músicas, o que a diferenciou muito da Bossa Nova, qual instrumento é esse ?",
+        alternativaA: "Guitarra",
+        alternativaB: "Gaita",
+        alternativaC: "Trompete",
+        alternativaD: "Violino",
+        alternativaCorreta: "alternativaA"
+    },
+
+    {
+        pergunta: "Nos anos 80 e 90 uma dupla criou inúmeras músicas de sucesso para grandes artistas, como Tim Maia, Gal Costa e etc. Quais os nomes das lendas?",
+        alternativaA: "Roberto e Carlos",
+        alternativaB: "Michael Sullivan e Paulo Massadas",
+        alternativaC: "Rodrigo Bandeiras e Pedro Luís",
+        alternativaD: "Victor Trevaneio e Guilherme Arcanjo",
+        alternativaCorreta: "alternativaB"
+    },
+
+    {
+        pergunta: 'Complete a música: "Você é ______, é tudo pra mim, é _______ baby "',
+        alternativaA: "é algo assim | mais que eu esperava",
+        alternativaB: "é algo sem fim | um anjo de asas",
+        alternativaC: "é algo assim | é como eu sonhava",
+        alternativaD: "é algo pra mim | é sempre assim",
+        alternativaCorreta: "alternativaC"
+    },
+
+    {
+        pergunta: 'O que significa a sigla "MPB"?',
+        alternativaA: "Música Para Brasileiros",
+        alternativaB: "Música Perfeita Brasileira",
+        alternativaC: "Música Primeiro Brasil",
+        alternativaD: "Música Popular Brasileira",
+        alternativaCorreta: "alternativaD"
     }
 
 ]

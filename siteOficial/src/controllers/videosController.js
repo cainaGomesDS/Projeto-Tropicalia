@@ -34,7 +34,7 @@ function trazerVideo(req, res) {
     videosModel.trazerVideo()
         .then(resultado => {
             res.status(200).json(resultado);
-            console.log(`DADOS DO MODEL RECEBIDOS NO CONTROLLER: ${resultado}`)
+            console.log('DADOS DO MODEL RECEBIDOS NO CONTROLLER:', resultado)
         })
         .catch(erro => {
             console.error(erro);

@@ -33,12 +33,11 @@ function validarLogin() {
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.SENHA_USUARIO = json.senha;
                 });
+
+                trocar()
                 
-                console.log(sessionStorage.ID_USUARIO)
-                console.log(sessionStorage.EMAIL_USUARIO)
-                setTimeout(() => {
-                    window.location = "index.html";
-                }, 2000);
+                
+                
             } else {
                 alert('Email e/ou senha inválido(s)')
                 console.log("Houve um erro ao tentar realizar o login!");
@@ -59,3 +58,12 @@ function validarLogin() {
     }
 }
 
+function trocar(){
+    
+    document.getElementById('conteudoLogin').style.display = "none"
+    document.getElementById('mensagemExito').style.display = "flex"
+                
+                setTimeout(() => {
+                    window.location = "index.html";
+                }, 3000);
+}

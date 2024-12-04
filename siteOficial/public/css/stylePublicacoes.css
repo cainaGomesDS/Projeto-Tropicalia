@@ -101,8 +101,23 @@ body {
 }
 
 .videos .configVideo{
+    display: flex;
+    flex-direction: column;
     margin: 50px;
 }
+
+.videos .configVideo p{
+    color: #3DA753;
+    font-weight: 300;
+    font-size: 20px;
+    margin: 0 0 20px 0
+}
+.videos .configVideo h2{
+    color: #da5e38;
+    margin: 0;
+}
+
+
 
 
 .btnPubli{

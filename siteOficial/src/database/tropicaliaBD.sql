@@ -39,7 +39,23 @@ ALTER TABLE links MODIFY COLUMN idLinks INT AUTO_INCREMENT;
 ALTER TABLE links ADD COLUMN titulo VARCHAR(70);
 SELECT nome, idLinks, url, titulo, fkCadastro FROM links as L JOIN cadastro as C ON L.fkCadastro = C.idCadastro ORDER BY idLinks DESC;
 
-DELETE FROM links where idLinks = 6; 
+CREATE TABLE curtidas(
+	idCurtidas INT AUTO_INCREMENT,
+    qtdCurtidas INT,
+    fkVideos INT,
+    fkCadastro INT,
+    CONSTRAINT fkCurtidasVideos
+		FOREIGN KEY (fkVideos) REFERENCES links(idLinks),
+	CONSTRAINT fkCurtidasUsuario
+		FOREIGN KEY (fkCadastro) REFERENCES cadastro(idCadastro),
+	PRIMARY KEY(idCurtidas, fkVideos, fkCadastro)
+);
+
+INSERT INTO curtidas (qtdCurtidas, fkVideos, fkCadastro) VALUES
+	(10, 9, 12);
+    
+select * from curtidas;
+truncate table curtidas;
 
 CREATE TABLE resultadosQuiz(
 	idResultado INT,
