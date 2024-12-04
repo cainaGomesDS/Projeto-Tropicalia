@@ -71,6 +71,7 @@ function trazerVideo() {
             resultado.forEach((resultado) => {
 
                 var url = resultado.url;
+                var idVideo = resultado.idLinks
 
                 // verifica se o link é um link curto do youtube
                 if (url.includes("youtu.be")) {
@@ -81,9 +82,11 @@ function trazerVideo() {
                 }
                 
                 mensagemVideo = `
-                <div class="configVideo">
-                <h2>${resultado.titulo}<h2> <p>${resultado.nome}</p>
+                <div class="configVideo" id="${idVideo}">
+                <h2>${resultado.titulo}<h2>
+                <p>Enviado por: ${resultado.nome}</p>
                 <iframe width="560" height="315" src="${url}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <button id="btn ${idVideo}" onclick="curtir(${idVideo})" >Like</button>
                 </div>
                 `
                 divVideos.innerHTML += mensagemVideo;
@@ -99,3 +102,47 @@ function trazerVideo() {
 
 }
 
+var listaIdVideo = [];
+function curtir(idVideo){
+    var qtdCurtidas = ''
+    
+    if(listaIdVideo.includes(idVideo)){
+        document.getElementById(`btn ${idVideo}`).style.backgroundColor = 'blue'
+        listaIdVideo.splice(listaIdVideo[`${idVideo}`])
+        
+    }else{
+        listaIdVideo.push(idVideo)
+        qtdCurtidas ++
+        document.getElementById(`btn ${idVideo}`).style.backgroundColor = 'red'
+
+        fetch(`/curtidas/enviarCurtida/${idVideo}/${sessionStorage.ID_USUARIO}`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                qtdCurtidasServer: qtdCurtidas
+            }),
+        })
+            .then(function (resposta) {
+                console.log("resposta: ", resposta);
+    
+                if (resposta.ok) {
+                    throw "Curtida enviada com sucesso!"
+    
+                } else {
+                    throw "Houve um erro ao tentar enviar a curtida no fetch!";
+                }
+            })
+            .catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+                // finalizarAguardar();
+            });
+    }
+    console.log(listaIdVideo)
+    console.log(qtdCurtidas)
+    
+    
+}
