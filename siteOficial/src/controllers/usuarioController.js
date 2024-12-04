@@ -76,7 +76,6 @@ function autenticar(req, res) {
                             );
                     } else if (resultadoAutenticar.length == 0) {
                         res.status(403).send("Email e/ou senha inválido(s)");
-                        res.status(204).json({ usuario: [] });
                     } else if (resultadoAutenticar[0].email == email || resultadoAutenticar[0]) {
                         res.status(403).send("Mais de um usuário com o mesmo login e senha!");
                     }
