@@ -56,12 +56,12 @@ body {
     color: #3DA753;
 }
 
-.header a:hover{
+.header a:hover {
     text-decoration: underline;
     transition: ease-in;
 }
 
-.header .nomeSiteHeader a{
+.header .nomeSiteHeader a {
     text-decoration: none;
 }
 
@@ -216,9 +216,11 @@ body {
     margin: 0px 0px 30px;
 }
 
-.bannerOnu img{
+.bannerOnu img {
     height: 300px;
 }
+
+
 
 
 .footer {
