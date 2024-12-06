@@ -261,13 +261,13 @@ function finalizarJogo() {
     let classComCoresParaMensagemFinal = null
     var imagemQuiz = ''
     const porcentagemFinalDeAcertos = pontuacaoFinal / quantidadeDeQuestoes
+    sessionStorage.PORCENTAGEM_PONTOS = porcentagemFinalDeAcertos;
     
     if (porcentagemFinalDeAcertos <= 0.3) {
         textoParaMensagemImagem = "Parece que você não conhece muito a MPB, experimente ouvir mais!..."
         classComCoresParaMensagemFinal = "text-danger-with-bg"
         imagemQuiz = "../assets/imagens/cachorro.jpg"
                 
-        // document.getElementById('divImagem') = 'OI'
     }
     else if (porcentagemFinalDeAcertos > 0.3 && porcentagemFinalDeAcertos < 0.9) {
         textoParaMensagemImagem = "Foi bem, mas dá para melhorar!"
@@ -283,6 +283,8 @@ function finalizarJogo() {
     document.getElementById('imagemQuiz').src = imagemQuiz
     textoParaMensagemImagem += "<br> Você acertou " + certas + " questões"
     textoParaMensagemFinal = Math.round((porcentagemFinalDeAcertos)*100) + "%"
+
+    
 
     document.getElementById('msgImagem').innerHTML = textoParaMensagemImagem
     document.getElementById('msgImagem').classList.add(classComCoresParaMensagemFinal)
@@ -306,8 +308,7 @@ function enviarResultados() {
        var acertosVar = certas;
        var errosvar = erradas;
        var pontuacaoVar = pontuacaoFinal;
-    console.log(acertosVar)
-
+   
     fetch(`/resultadosQuiz/resultado/${sessionStorage.ID_USUARIO}`, {
         method: 'POST',
         headers: {
@@ -383,6 +384,9 @@ function plotarGrafico() {
             resultado.forEach((resultado) => {
                 barChartQuiz.datasets[0].data.push(resultado.acertos);
                 barChartQuiz.datasets[1].data.push(resultado.erros);
+
+                sessionStorage.ACERTOS = resultado.acertos;
+                sessionStorage.ERROS = resultado.erros;
             });
 
           

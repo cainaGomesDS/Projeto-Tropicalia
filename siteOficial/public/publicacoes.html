@@ -11,10 +11,13 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
+        <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=bar_chart_4_bars" />
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
 
-<body onload="validarSessao(), trazerVideo()">
+<body onload="validarSessao(), qtdVideos(), trazerVideo()">
     <div class="header">
         <div class="container">
             <h1 class="nomeSiteHeader"><a href="index.html">Tropicália</a></h1>
@@ -54,9 +57,7 @@
  
     <div id="divVideos" class="videos">
         
-    </div>
-
-    
+    </div>    
     
     
     <button onclick="abrirForm()" class="btnPubli">
@@ -72,6 +73,43 @@
         <button id="btnEnviarForm" onclick="fecharForm(), enviarVideos()">Enviar</button>
     </dialog>
 
+
+    <button onclick=" verificarEstatistica(), plotarGrafico(), qtdVideos(), obterDadosVideo()" class="btnEstatisticas">
+        <span class="material-symbols-outlined">
+            bar_chart_4_bars
+        </span>
+    </button>
+    <dialog id="modalEsta">
+        <button id="fecharModalEsta" onclick="fecharFormEsta()">X</button>
+        <div id="graficos" class="charts" style="display: none;">
+            <div class="graficos">
+                <canvas id="barChartQuiz"></canvas>
+
+                <canvas id="lineChartDash"></canvas>
+            </div>
+
+            <div class="cssKpi">
+                <div class="kpi">
+                    <div class="kpiPontos">
+                        <h4>Você acertou:</h4>
+                        <span id="msgFinal" class="msgFinalCss"></span>
+                    </div>
+                </div>
+
+                <div class="kpi">
+                    <div class="kpiVideosPostados">
+                        <div class="kpiPontos">
+                            <h4>Quantidade de vídeos postados:</h4>
+                            <span id="qtdVideosUsuario"></span>
+                        </div>
+                        <h1>Tropicália</h1>
+                    </div>
+                </div>
+            </div>
+
+
+
+    </dialog>
 
     <div class="footer">
         <div class="nomeSiteFooter">Tropicália</div>

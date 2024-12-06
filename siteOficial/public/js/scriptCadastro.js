@@ -131,10 +131,8 @@ function validarCadastro() {
                 console.log("resposta: ", resposta);
 
                 if (resposta.ok) {
-                    cardErro.style.display = "block";
+                    alert('Cadastro realizado com sucesso!! Redirecionando para tela de login...')
 
-                    mensagem_erro.innerHTML =
-                        "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
                 } else {
                     throw "Houve um erro ao tentar realizar o cadastro!";
                 }

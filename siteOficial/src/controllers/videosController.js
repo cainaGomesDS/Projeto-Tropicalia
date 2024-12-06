@@ -42,7 +42,21 @@ function trazerVideo(req, res) {
         });
 }
 
+function qtdVideos(req, res) {
+    var idUsuario = req.params.idUsuario;
+    videosModel.quantidadeVideos(idUsuario)
+        .then(resultado => {
+            res.status(200).json(resultado);
+            console.log('DADOS DO MODEL QTDVIDEOS RECEBIDOS NO CONTROLLER:', resultado)
+        })
+        .catch(erro => {
+            console.error(erro);
+            res.status(500).json({ error: erro.message });
+        });
+}
+
 module.exports = {
     enviarVideo,
-    trazerVideo
+    trazerVideo,
+    qtdVideos
 }
